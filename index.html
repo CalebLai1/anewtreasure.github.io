@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A New Treasures - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>A New Treasures</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for retro items...">
+                <button>Search</button>
+            </div>
+            <div id="cart-widget" class="cart-widget">
+                <a href="cart.html" id="cart-link">
+                    <span id="cart-count" class="cart-count">0</span>
+                    <i class="cart-icon">🛒</i>
+                </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home">
+            <h2>Welcome to A New Treasures</h2>
+            <p>Step into the neon-lit world of yesteryear! Discover vintage tech, retro fashion, and synthwave-inspired decor.</p>
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-item" data-id="1" data-name="Vintage Synthesizer" data-price="299.99" data-stock="5">
+                    <img src="/api/placeholder/200/200" alt="Retro Synth">
+                    <h3>Vintage Synthesizer</h3>
+                    <p class="price">$299.99</p>
+                    <p class="stock">In stock: 5</p>
+                    <button class="add-to-cart" id="add-to-cart-1">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Neon Sunglasses" data-price="49.99" data-stock="10">
+                    <img src="/api/placeholder/200/200" alt="Neon Sunglasses">
+                    <h3>Neon Sunglasses</h3>
+                    <p class="price">$49.99</p>
+                    <p class="stock">In stock: 10</p>
+                    <button class="add-to-cart" id="add-to-cart-2">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 A New Treasures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="retro-banner">
+        Best viewed with Netscape Navigator or Internet Explorer 4.0
+    </div>
+
+    <script src="cartScript.js"></script>
+</body>
+</html>
