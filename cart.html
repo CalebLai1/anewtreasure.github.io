@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A New Treasures - Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>A New Treasures</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Your Cart</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-contents">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <div id="cart-total">
+            <!-- Total will be displayed here -->
+        </div>
+        <div>
+            <button id="save-for-later">Save for Later</button>
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 A New Treasures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cartScript.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartContents = document.getElementById('cart-contents');
+            const cartTotal = document.getElementById('cart-total');
+            const saveForLaterButton = document.getElementById('save-for-later');
+            const checkoutButton = document.getElementById('checkout-button');
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            function displayCart() {
+                if (cart.length === 0) {
+                    cartContents.innerHTML = '<tr><td colspan="4">Your cart is empty.</td></tr>';
+                    cartTotal.innerHTML = '';
+                } else {
+                    let html = '';
+                    let total = 0;
+                    cart.forEach(item => {
+                        const itemTotal = item.price * item.quantity;
+                        html += `
+                            <tr>
+                                <td>${item.name}</td>
+                                <td>$${item.price.toFixed(2)}</td>
+                                <td>${item.quantity}</td>
+                                <td>$${itemTotal.toFixed(2)}</td>
+                            </tr>
+                        `;
+                        total += itemTotal;
+                    });
+                    cartContents.innerHTML = html;
+                    cartTotal.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
+                }
+            }
+
+            displayCart();
+
+            saveForLaterButton.addEventListener('click', function() {
+                alert('Cart saved for later!');
+                // In a real application, you might implement actual "save for later" functionality here
+            });
+
+            checkoutButton.addEventListener('click', function() {
+                alert('Proceeding to checkout... (This is a placeholder)');
+                // In a real application, you would implement the checkout process here
+            });
+        });
+    </script>
+</body>
+</html>

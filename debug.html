@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A New Treasures - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- ... (header content) ... -->
+        <div id="cart-widget" class="cart-widget">
+            <a href="cart.html" id="cart-link" class="cart-circle">
+                <span id="cart-count" class="cart-count">0</span>
+                <i class="cart-icon">🛒</i>
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-item" data-id="1" data-name="Vintage Synthesizer" data-price="299.99">
+                    <img src="/api/placeholder/200/200" alt="Retro Synth">
+                    <h3>Vintage Synthesizer</h3>
+                    <p class="price">$299.99</p>
+                    <button class="add-to-cart" onclick="addToCart(1)">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Neon Sunglasses" data-price="49.99">
+                    <img src="/api/placeholder/200/200" alt="Neon Sunglasses">
+                    <h3>Neon Sunglasses</h3>
+                    <p class="price">$49.99</p>
+                    <button class="add-to-cart" onclick="addToCart(2)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- ... (footer content) ... -->
+    </footer>
+
+    <script src="cartScript.js"></script>
+</body>
+</html>
