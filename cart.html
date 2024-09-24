@@ -5,21 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A New Treasures - Cart</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="cartPageScript.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>A New Treasures</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A New Treasures - Home</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="cartScript.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>A New Treasures</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for retro items...">
+                    <button>Search</button>
+                </div>
+                <div id="cart-widget" class="cart-widget">
+                    <a href="cart.html" id="cart-link">
+                        <span id="cart-count" class="cart-count">0</span>
+                        <i class="cart-icon">🛒</i>
+                    </a>
+            </div>
+        </header>
 
     <main class="container">
         <h2>Your Cart</h2>
@@ -30,6 +48,7 @@
                     <th>Price</th>
                     <th>Quantity</th>
                     <th>Total</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody id="cart-contents">
@@ -62,19 +81,26 @@
 
             function displayCart() {
                 if (cart.length === 0) {
-                    cartContents.innerHTML = '<tr><td colspan="4">Your cart is empty.</td></tr>';
+                    cartContents.innerHTML = '<tr><td colspan="5">Your cart is empty.</td></tr>';
                     cartTotal.innerHTML = '';
                 } else {
                     let html = '';
                     let total = 0;
-                    cart.forEach(item => {
+                    cart.forEach((item, index) => {
                         const itemTotal = item.price * item.quantity;
                         html += `
                             <tr>
                                 <td>${item.name}</td>
                                 <td>$${item.price.toFixed(2)}</td>
-                                <td>${item.quantity}</td>
+                                <td>
+                                    <button class="quantity-btn" data-index="${index}" data-action="decrease">-</button>
+                                    ${item.quantity}
+                                    <button class="quantity-btn" data-index="${index}" data-action="increase">+</button>
+                                </td>
                                 <td>$${itemTotal.toFixed(2)}</td>
+                                <td>
+                                    <button class="remove-btn" data-index="${index}">Remove</button>
+                                </td>
                             </tr>
                         `;
                         total += itemTotal;
@@ -84,7 +110,37 @@
                 }
             }
 
-            displayCart();
+            function updateCart() {
+                localStorage.setItem('cart', JSON.stringify(cart));
+                displayCart();
+            }
+
+            function removeFromCart(index) {
+                cart.splice(index, 1);
+                updateCart();
+            }
+
+            function updateQuantity(index, action) {
+                const item = cart[index];
+                const maxQuantity = item.max || 5; // Default max quantity is 5 if not specified
+                if (action === 'increase' && item.quantity < maxQuantity) {
+                    item.quantity++;
+                } else if (action === 'decrease' && item.quantity > 1) {
+                    item.quantity--;
+                }
+                updateCart();
+            }
+
+            cartContents.addEventListener('click', function(e) {
+                if (e.target.classList.contains('remove-btn')) {
+                    const index = e.target.dataset.index;
+                    removeFromCart(index);
+                } else if (e.target.classList.contains('quantity-btn')) {
+                    const index = e.target.dataset.index;
+                    const action = e.target.dataset.action;
+                    updateQuantity(index, action);
+                }
+            });
 
             saveForLaterButton.addEventListener('click', function() {
                 alert('Cart saved for later!');
@@ -95,6 +151,8 @@
                 alert('Proceeding to checkout... (This is a placeholder)');
                 // In a real application, you would implement the checkout process here
             });
+
+            displayCart();
         });
     </script>
 </body>
