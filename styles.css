@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Orbitron', sans-serif;
-    background-color: #120458;
-    color: #ff00ff;
+    background-color: #f9f5f2;
+    color: #f9f5f2;
     margin: 0;
     padding: 0;
     background-image: 
@@ -37,17 +37,17 @@ body {
 
 /* Header styles */
 header {
-    background-color: rgba(18, 4, 88, 0.8);
+    background-color: #d6e0c9;
     padding: 20px 0;
-    box-shadow: 0 0 20px #00ffff;
+    box-shadow: 0 0 20px #939b7d;
 }
 
 h1 {
     font-size: 3em;
     text-align: center;
     margin: 0;
-    color: #00ffff;
-    text-shadow: 0 0 10px #00ffff;
+    color: #707654;
+    text-shadow: 0 0 10px #939b7d;
 }
 
 /* Navigation styles */
@@ -70,15 +70,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ff00ff;
+    color: #f9f5f2;
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00ffff;
-    text-shadow: 0 0 10px #00ffff;
+    color: #939b7d;
+    text-shadow: 0 0 10px #939b7d;
 }
 
 /* Search bar styles */
@@ -91,9 +91,9 @@ nav ul li a:hover {
 .search-bar input {
     padding: 10px;
     font-size: 1em;
-    border: 2px solid #ff00ff;
-    background-color: rgba(255, 0, 255, 0.1);
-    color: #00ffff;
+    border: 2px solid #f9f5f2;
+    /* background-color: rgba(255, 0, 255, 0.1); */
+    color: #939b7d;
     width: 60%;
     max-width: 300px;
 }
@@ -101,7 +101,7 @@ nav ul li a:hover {
 .search-bar button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #ff00ff;
+    background-color: #f9f5f2;
     color: #120458;
     border: none;
     cursor: pointer;
@@ -109,21 +109,21 @@ nav ul li a:hover {
 }
 
 .search-bar button:hover {
-    background-color: #00ffff;
+    background-color: #939b7d;
 }
 
 /* Section styles */
 section {
     margin: 40px 0;
     padding: 20px;
-    background-color: rgba(18, 4, 88, 0.6);
-    border: 2px solid #ff00ff;
-    box-shadow: 0 0 20px #ff00ff;
+    background-color: #afa8a0;
+    border: 2px solid #f9f5f2;
+    box-shadow: 0 0 20px #f9f5f2;
 }
 
 h2 {
-    color: #00ffff;
-    text-shadow: 0 0 10px #00ffff;
+    color: #707654;
+    text-shadow: 0 0 10px #939b7d;
 }
 
 /* Product grid styles */
@@ -134,10 +134,10 @@ h2 {
 }
 
 .product-item {
-    background-color: rgba(255, 0, 255, 0.1);
+    background-color: #d6e0c9;
     padding: 20px;
     text-align: center;
-    border: 2px solid #00ffff;
+    border: 2px solid #939b7d;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -153,10 +153,10 @@ h2 {
 }
 
 .product-item {
-    background-color: rgba(255, 0, 255, 0.1);
+    background-color: #d6e0c9;
     padding: 20px;
     text-align: center;
-    border: 2px solid #00ffff;
+    border: 2px solid #939b7d;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -172,24 +172,24 @@ h2 {
 }
 
 .product-item h3 {
-    color: #00ffff;
+    color: #939b7d;
     margin-bottom: 10px;
 }
 
 .product-item .price {
     font-size: 1.2em;
-    color: #ff00ff;
+    color: #f9f5f2;
     margin-bottom: 5px;
 }
 
 .product-item .stock {
     font-size: 0.9em;
-    color: #00ffff;
+    color: #939b7d;
     margin-bottom: 10px;
 }
 
 .add-to-cart {
-    background-color: #ff00ff;
+    background-color: #f9f5f2;
     color: #120458;
     border: none;
     padding: 10px 15px;
@@ -198,7 +198,7 @@ h2 {
 }
 
 .add-to-cart:hover {
-    background-color: #00ffff;
+    background-color: #939b7d;
 }
 
 
@@ -206,13 +206,13 @@ h2 {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: rgba(18, 4, 88, 0.8);
-    color: #ff00ff;
-    box-shadow: 0 0 20px #00ffff;
+    background-color: #d6e0c9;
+    color: #f9f5f2;
+    box-shadow: 0 0 20px #939b7d;
 }
 
 .retro-banner {
-    background-color: #ff00ff;
+    background-color: #f9f5f2;
     color: #120458;
     text-align: center;
     padding: 10px;
@@ -231,13 +231,13 @@ footer {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #ff00ff;
+    border: 2px solid #f9f5f2;
     background-color: rgba(255, 0, 255, 0.1);
-    color: #00ffff;
+    color: #939b7d;
 }
 
 .contact-form button {
-    background-color: #ff00ff;
+    background-color: #f9f5f2;
     color: #120458;
     border: none;
     padding: 10px 20px;
@@ -246,7 +246,7 @@ footer {
 }
 
 .contact-form button:hover {
-    background-color: #00ffff;
+    background-color: #939b7d;
 }
 
 /* Responsive design */
@@ -300,13 +300,13 @@ footer {
 /* Animations */
 @keyframes neonGlow {
     0% {
-        text-shadow: 0 0 10px #00ffff;
+        text-shadow: 0 0 10px #939b7d;
     }
     50% {
-        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+        text-shadow: 0 0 20px #939b7d, 0 0 30px #939b7d;
     }
     100% {
-        text-shadow: 0 0 10px #00ffff;
+        text-shadow: 0 0 10px #939b7d;
     }
 }
 
@@ -325,7 +325,7 @@ h1, h2 {
 }
 
 nav ul li a:hover {
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    text-shadow: 0 0 10px #939b7d, 0 0 20px #939b7d;
 }
 
 /* Existing styles... */
@@ -335,8 +335,8 @@ nav ul li a:hover {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: rgba(0, 255, 255, 0.2);
-    border: 2px solid #00ffff;
+    /* background-color: rgba(0, 255, 255, 0.2); */
+    border: 2px solid #939b7d;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -350,20 +350,20 @@ nav ul li a:hover {
 
 .cart-widget:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #00ffff;
+    box-shadow: 0 0 15px #939b7d;
 }
 
 .cart-icon {
     font-size: 24px;
-    color: #00ffff;
+    color: #939b7d;
 }
 
 .cart-count {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: #ff00ff;
-    color: #120458;
+    background-color: #f9f5f2;
+    color: #d6e0c9;
     border-radius: 50%;
     width: 25px;
     height: 25px;
@@ -379,7 +379,7 @@ nav ul li a:hover {
     top: 70px;
     right: 0;
     background-color: rgba(18, 4, 88, 0.9);
-    border: 2px solid #00ffff;
+    border: 2px solid #939b7d;
     padding: 15px;
     display: none;
     min-width: 200px;
@@ -390,7 +390,7 @@ nav ul li a:hover {
 }
 
 #save-for-later, #checkout-button {
-    background-color: #00ffff;
+    background-color: #939b7d;
     color: #120458;
     border: none;
     padding: 10px 20px;
@@ -400,19 +400,19 @@ nav ul li a:hover {
 }
 
 #save-for-later:hover, #checkout-button:hover {
-    background-color: #ff00ff;
+    background-color: #f9f5f2;
 }
 
 /* Keyframe animation for the cart glow effect */
 @keyframes cartGlow {
     0% {
-        box-shadow: 0 0 5px #00ffff;
+        box-shadow: 0 0 5px #939b7d;
     }
     50% {
-        box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+        box-shadow: 0 0 20px #939b7d, 0 0 30px #939b7d;
     }
     100% {
-        box-shadow: 0 0 5px #00ffff;
+        box-shadow: 0 0 5px #939b7d;
     }
 }
 
@@ -429,8 +429,8 @@ nav ul li a:hover {
     align-items: center;
     width: 60px;
     height: 60px;
-    background-color: rgba(0, 255, 255, 0.2);
-    border: 2px solid #00ffff;
+    /* background-color: rgba(0, 255, 255, 0.2); */
+    border: 2px solid #939b7d;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -440,20 +440,20 @@ nav ul li a:hover {
 
 .cart-circle:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #00ffff;
+    box-shadow: 0 0 15px #939b7d;
 }
 
 .cart-icon {
     font-size: 24px;
-    color: #00ffff;
+    color: #939b7d;
 }
 
 .cart-count {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: #ff00ff;
-    color: #120458;
+    background-color: #f9f5f2;
+    /*color: #120458;*/
     border-radius: 50%;
     width: 25px;
     height: 25px;
@@ -466,13 +466,13 @@ nav ul li a:hover {
 
 @keyframes cartGlow {
     0% {
-        box-shadow: 0 0 5px #00ffff;
+        box-shadow: 0 0 5px #939b7d;
     }
     50% {
-        box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+        box-shadow: 0 0 20px #939b7d, 0 0 30px #939b7d;
     }
     100% {
-        box-shadow: 0 0 5px #00ffff;
+        box-shadow: 0 0 5px #939b7d;
     }
 }
 
@@ -489,12 +489,12 @@ nav ul li a:hover {
     
     .cart-widget:hover {
         transform: scale(1.1);
-        box-shadow: 0 0 15px #00ffff;
+        box-shadow: 0 0 15px #939b7d;
     }
     
     .cart-icon {
         font-size: 24px;
-        color: #00ffff;
+        color: #939b7d;
     }
     .cart-count {
         width: 20px;
